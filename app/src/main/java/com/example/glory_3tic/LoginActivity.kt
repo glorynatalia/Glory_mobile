@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -30,21 +31,37 @@ class LoginActivity : AppCompatActivity() {
 //        val username : EditText = findViewById(R.id.edtusername)
 //        val password : EditText = findViewById(R.id.edtpassword)
 
+// Kode ini harus selalu dipanggil saat butuh akses "user_pref"
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+// Kondisi jika isLogin bernilai true
+//        val isLogin = sharedPref.getBoolean("isLogin", false)
+//        if (isLogin) {
+//            startActivity(Intent(this, MainActivity::class.java))
+//            finish()
+//            return
+//        }
+
         binding.btnlogin.setOnClickListener {
             val user = binding.edtusername.text.toString()
             val pass = binding.edtpassword.text.toString()
 
-            //intent untuk memindahkan kehalaman yang lain
-            val intent = Intent(this@LoginActivity, MainActivity::class.java)
-            intent.putExtra("nama", "Glory Natalia Sitompul")
-            intent.putExtra("umur", 20)
-            startActivity(intent)
+            if (user.isNotEmpty() && user == pass) {
 
-            Log.d("username:", user)
-            Log.d( "Password :", pass)
+                val editor = sharedPref.edit()
+                editor.putBoolean("isLogin", true)
+                editor.putString("username", user)
+                editor.apply()
 
-            Toast.makeText(this, "Username: $user Password: $pass", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            } else {
+                AlertDialog.Builder(this)
+                    .setTitle("Login Gagal")
+                    .setMessage("Silahkan coba lagi")
+                    .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+                    .show()
+            }
         }
-
     }
+
 }
