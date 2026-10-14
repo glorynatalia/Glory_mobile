@@ -23,24 +23,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".MainActivity"
+            android:name=".Home.Pertemuan5.LimaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Pertemuan5.LimaActivity"
+            android:name=".Home.Pertemuan5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Pertemuan5.WebViewActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".Pertemuan6.EnamActivity"
+            android:name=".Home.Pertemuan6.EnamActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".BaseActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

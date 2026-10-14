@@ -1,4 +1,4 @@
-package com.example.glory_3tic.Pertemuan6
+package com.example.glory_3tic.Home.Pertemuan6
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

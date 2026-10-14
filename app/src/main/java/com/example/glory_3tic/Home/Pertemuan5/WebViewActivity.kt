@@ -1,4 +1,4 @@
-package com.example.glory_3tic.Pertemuan5
+package com.example.glory_3tic.Home.Pertemuan5
 
 import android.os.Bundle
 import android.view.MenuItem
