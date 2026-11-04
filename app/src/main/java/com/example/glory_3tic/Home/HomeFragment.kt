@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.example.glory_3tic.Home.Pertemuan5.LimaActivity
 import com.example.glory_3tic.Home.Pertemuan6.EnamActivity
+import com.example.glory_3tic.Home.Pertemuan9.NinthActivity
 import com.example.glory_3tic.LoginActivity
 import com.example.glory_3tic.R
 import com.example.glory_3tic.databinding.FragmentHomeBinding
@@ -48,6 +49,10 @@ class HomeFragment : Fragment() {
         }
         binding.btntoenam.setOnClickListener {
             val intent = Intent(requireContext(), EnamActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btntoSembilan.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
         binding.btnLogout.setOnClickListener {
