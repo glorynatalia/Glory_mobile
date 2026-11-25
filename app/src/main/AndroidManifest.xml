@@ -52,12 +52,18 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Home.Pertemuan11.EleventActivity"
+            android:name=".Home.Pertemuan11.EleventhActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Home.Pertemuan11.EleventhActivity"
+            android:name=".Note.NoteFormActivity"
             android:exported="false"
+            android:theme="@style/Theme.Glory_3tic"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Catatan.CatatanFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Glory_3tic"
             android:windowSoftInputMode="adjustResize" />
     </application>
 

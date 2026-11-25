@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.glory_3tic.Catatan.CatatanFragment
 import com.example.glory_3tic.Home.HomeFragment
 import com.example.glory_3tic.Message.MessageFragment
 import com.example.glory_3tic.More.MoreFragment
+import com.example.glory_3tic.Note.NoteFragment
 import com.example.glory_3tic.databinding.ActivityBaseBinding
 import com.example.glory_3tic.databinding.ActivityLoginBinding
 
@@ -42,6 +44,16 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
+                    true
+                }
+
+                R.id.catatan -> {
+                    replaceFragment(CatatanFragment())
                     true
                 }
                 else -> false // false jika item tidak dikenal
